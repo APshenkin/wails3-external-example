@@ -58,6 +58,41 @@ func main() {
 		Mac: application.MacOptions{
 			ApplicationShouldTerminateAfterLastWindowClosed: true,
 		},
+		//Bindings: application.BindingConfig{
+		//	// Longer timeout for production workloads
+		//	Timeout: 10 * time.Minute,
+		//
+		//	// Strict CORS configuration for production
+		//	CORS: application.CORSConfig{
+		//		// Enable CORS with strict controls
+		//		Enabled: true,
+		//
+		//		// Only allow specific production origins
+		//		AllowedOrigins: []string{
+		//			"https://app-local.wails-awesome.io:3000",
+		//			"https://app-local.wails-awesome.io",
+		//			//"https://app.myapp.com",
+		//			//"https://*.myapp.com", // Allow subdomains
+		//		},
+		//
+		//		// Limited HTTP methods for security
+		//		AllowedMethods: []string{"GET", "POST", "OPTIONS"},
+		//
+		//		// Minimal required headers only
+		//		AllowedHeaders: []string{
+		//			"Content-Type",
+		//			"x-wails-client-id",
+		//			"x-wails-window-name",
+		//			"Authorization", // For authenticated requests
+		//		},
+		//
+		//		// Longer cache time for production efficiency
+		//		MaxAge: 24 * time.Hour,
+		//	},
+		//
+		//	// Enable streaming for large data processing
+		//	EnableStreaming: true,
+		//},
 		// NOTE: message handler for post messages
 		RawMessageHandler: func(window application.Window, message string) {
 			parsed := rawMessageHandlerMessage{}

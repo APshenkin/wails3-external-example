@@ -9,6 +9,9 @@ export default defineConfig((configEnv) => {
       server: {
         host: 'app-local.wails-awesome.io',
         port: 3000,
+        // headers: {
+        //   'content-security-policy': "default-src wails://localhost 'self'; connect-src wails://localhost 'self'; script-src 'self' 'unsafe-inline'"
+        // },
         https: {
           cert: fs.readFileSync(path.resolve(__dirname, './ssl/server.pem')),
           key: fs.readFileSync(
