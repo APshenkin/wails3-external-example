@@ -58,6 +58,7 @@ func main() {
 		Mac: application.MacOptions{
 			ApplicationShouldTerminateAfterLastWindowClosed: true,
 		},
+		// NOTE: message handler for post messages
 		RawMessageHandler: func(window application.Window, message string) {
 			parsed := rawMessageHandlerMessage{}
 			json.Unmarshal([]byte(message), &parsed)
